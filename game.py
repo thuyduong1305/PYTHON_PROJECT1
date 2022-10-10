@@ -129,3 +129,14 @@ while 1:
         playerpos[0]-=5
     elif keys[3]:
         playerpos[0]+=5
+
+    #giới hạn thỏ trong khung hình
+    if playerpos[0] <=30:
+        playerpos[0] =30
+    if playerpos[0] >=610:
+        playerpos[0] =610
+    if playerpos[1] <=30:
+        playerpos[1] =30
+    if playerpos[1] >=450:
+        playerpos[1] =450
+    
