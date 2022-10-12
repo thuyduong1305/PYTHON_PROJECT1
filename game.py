@@ -98,22 +98,22 @@ while 1:
             pygame.quit() 
             exit(0) 
         if event.type == pygame.KEYDOWN:
-            if event.key==K_w:
+            if event.key==K_SPACE:
                 keys[0]=True
-            elif event.key==K_a:
+            elif event.key==K_DOWN:
                 keys[1]=True
-            elif event.key==K_s:
+            elif event.key==K_LEEF:
                 keys[2]=True
-            elif event.key==K_d:
+            elif event.key==K_RIGHT:
                 keys[3]=True
         if event.type == pygame.KEYUP:
-            if event.key==pygame.K_w:
+            if event.key==pygame.K_SPACE:
                 keys[0]=False
-            elif event.key==pygame.K_a:
+            elif event.key==pygame.K_DOWN:
                 keys[1]=False
-            elif event.key==pygame.K_s:
+            elif event.key==pygame.K_LEFT:
                 keys[2]=False
-            elif event.key==pygame.K_d:
+            elif event.key==pygame.K_RIGHT:
                 keys[3]=False
         if event.type==pygame.MOUSEBUTTONDOWN:
             position=pygame.mouse.get_pos()
@@ -131,12 +131,5 @@ while 1:
         playerpos[0]+=5
 
     #giới hạn thỏ trong khung hình
-    if playerpos[0] <=30:
-        playerpos[0] =30
-    if playerpos[0] >=610:
-        playerpos[0] =610
-    if playerpos[1] <=30:
-        playerpos[1] =30
-    if playerpos[1] >=450:
-        playerpos[1] =450
+    
     
